@@ -152,7 +152,10 @@ const Metronome = () => {
       
       alert("start211")
 
-      
+      document.querySelector('button')?.addEventListener('click', async () => {
+        await Tone.start()
+        console.log('audio is ready')
+      })
 
 
 
