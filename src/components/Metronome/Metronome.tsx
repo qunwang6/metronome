@@ -149,22 +149,10 @@ const Metronome = () => {
       Tone.Transport.start()
       
       alert("start111")
+      Tone.context.resume()
+      startContext();
 
-      const startContext = async () => {
-        await Tone.start();
-        Transport.start();
-    };
 
-  const startPlayer = async (parent, title, loopEnd) => {
-          if (!context.isStarted) {
-              await startContext();
-          }
-
-          if (Tone.context.state !== "running") {
-              Tone.context.resume();
-          }
-
-  }
 
   
       
