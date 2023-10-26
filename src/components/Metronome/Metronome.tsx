@@ -149,9 +149,9 @@ const Metronome = () => {
       Tone.Transport.start()
       
       alert("start")
-      const emptySource = ctx.createBufferSource();
-      emptySource.start();
-      emptySource.stop();
+      const emptySource = ctx.createBufferSource()
+      emptySource.start()
+      emptySource.stop()
   
       
     } else {
