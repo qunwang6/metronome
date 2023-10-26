@@ -149,8 +149,9 @@ const Metronome = () => {
       Tone.Transport.start()
       
       alert("start111")
-      Tone.context.resume()
-      // Tone.context.
+
+      audioContext = new AudioContext();
+      // AudioContext()
 
 
 
