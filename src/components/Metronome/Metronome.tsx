@@ -150,7 +150,7 @@ const Metronome = () => {
       
       alert("start111")
 
-      audioContext = new AudioContext();
+      audioContext = new AudioContext()
       // AudioContext()
 
 
