@@ -147,15 +147,12 @@ const Metronome = () => {
     if (isPlaying && !muteSound) {
       handleTick()
 
-      Tone.start()
-      Tone.Transport.start()
+      await Tone.start()
+      // Tone.Transport.start()
       
       alert("start211")
 
-      document.querySelector('button')?.addEventListener('click', async () => {
-        await Tone.start()
-        console.log('audio is ready')
-      })
+
 
 
 
