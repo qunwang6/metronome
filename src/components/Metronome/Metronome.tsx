@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useMemo, useRef } from 'react'
+import { useCallback, useContext, useEffect, useMemo, useRef } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import * as Tone from 'tone'
 import { TIME_SIGNATURES, validBpm } from '../../utils'
@@ -134,26 +134,24 @@ const Metronome = () => {
   }, [beatsPerMeasure, beatUnit, tone1, tone2, tickerRef])
 
   useEffect(() => {
-    Tone.start(); // Start the audio context from a user action
-
     Tone.Transport.set({
       bpm: bpm,
       timeSignature: beatsPerMeasure / beatUnit,
-    });
-  }, [bpm, beatsPerMeasure, beatUnit]);
+    })
+  }, [bpm, beatsPerMeasure, beatUnit])
 
   useEffect(() => {
-    Tone.Transport.stop();
-    Tone.Transport.clear(tickerRef.current);
+    Tone.Transport.stop()
+    Tone.Transport.clear(tickerRef.current)
 
     if (isPlaying && !muteSound) {
-      handleTick();
-      Tone.Transport.start();
+      handleTick()
+      Tone.Transport.start()
     } else {
-      Tone.Transport.stop();
-      Tone.Transport.clear(tickerRef.current);
+      Tone.Transport.stop()
+      Tone.Transport.clear(tickerRef.current)
     }
-  }, [isPlaying, muteSound, handleTick, tickerRef, bpm]);
+  }, [isPlaying, muteSound, handleTick, tickerRef, bpm])
 
   return (
     <div key={`${bpm}-${isPlaying}-${blinkOnTick}-${timeSignature}`}>
@@ -172,21 +170,22 @@ const Metronome = () => {
       <ControlCenter
         onTempoChange={(tempo: number) => {
           if (!validBpm(tempo)) {
-            return;
+            return
           }
-          setBpm?.(tempo);
+
+          setBpm?.(tempo)
         }}
         onPlay={() => {
-          setIsPlaying?.(!isPlaying);
+          setIsPlaying?.(!isPlaying)
         }}
         isPlaying={isPlaying}
         handleTapTempo={() => {
-          tapper?.tap();
-          setBpm?.(tapper?.bpm);
+          tapper?.tap()
+          setBpm?.(tapper?.bpm)
         }}
       />
     </div>
   )
 }
 
-export default Metronome;
+export default Metronome
