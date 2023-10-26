@@ -150,7 +150,7 @@ const Metronome = () => {
       Tone.start()
       Tone.Transport.start()
       
-      alert("start111")
+      alert("start211")
 
       
 
