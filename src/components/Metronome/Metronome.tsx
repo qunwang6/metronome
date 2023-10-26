@@ -148,10 +148,24 @@ const Metronome = () => {
       handleTick()
       Tone.Transport.start()
       
-      alert("start")
-      const emptySource = ctx.createBufferSource()
-      emptySource.start()
-      emptySource.stop()
+      alert("start111")
+
+      const startContext = async () => {
+        await Tone.start();
+        Transport.start();
+    };
+
+  const startPlayer = async (parent, title, loopEnd) => {
+          if (!context.isStarted) {
+              await startContext();
+          }
+
+          if (Tone.context.state !== "running") {
+              Tone.context.resume();
+          }
+
+  }
+
   
       
     } else {
