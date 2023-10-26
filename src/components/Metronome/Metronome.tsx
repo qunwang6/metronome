@@ -147,11 +147,11 @@ const Metronome = () => {
     if (isPlaying && !muteSound) {
       handleTick()
       Tone.Transport.start()
-      Alert("start")
+      // Alert("start")
     } else {
       Tone.Transport.stop()
       Tone.Transport.clear(tickerRef.current)
-      Alert("stop")
+      // Alert("stop")
     }
   }, [isPlaying, muteSound, handleTick, tickerRef, bpm])
 
