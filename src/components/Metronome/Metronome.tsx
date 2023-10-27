@@ -6,7 +6,7 @@ import { ControlCenter } from '../ControlCenter'
 import { KVContext } from '../KVContextProvider/KVContextProvider'
 import { MetroContext } from '../MetroContextProvider/MetroContextProvider'
 import { Ticker } from '../Ticker'
-// import * as unmute from './unmute'
+import * as unmute from 'unmute'
 
 const TickerWrapper = styled.div`
   width: 100%;
