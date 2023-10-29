@@ -163,7 +163,7 @@ const Metronome = () => {
       let forceIOSBehavior = false;
       if (context)
         {
-          alert("aaaa");
+          // alert("aaaa");
           // If you need to be able to disable unmute at a later time, you can use the returned handle's dispose() method
           // if you don't need to do that (most folks won't) then you can simply ignore the return value
           let unmuteHandle = unmute(context, allowBackgroundPlayback, forceIOSBehavior);
@@ -172,9 +172,10 @@ const Metronome = () => {
       handleTick()
 
       
+      await Tone.start()
 
       // Tone.start()
-      Tone.Transport.start()
+      // Tone.Transport.start()
       // Tone.context.resume()
       // alert("start211")
 
