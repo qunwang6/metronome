@@ -8,7 +8,7 @@ import { MetroContext } from '../MetroContextProvider/MetroContextProvider'
 import { Ticker } from '../Ticker'
 
 
-
+declare var unmute: any;
 const TickerWrapper = styled.div`
   width: 100%;
   height: 50vh;
