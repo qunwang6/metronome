@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "unmute-ios-audio": "github:feross/unmute-ios-audio",
     "@react-hook/media-query": "^1.1.1",
     "@tauri-apps/api": "^1.4.0",
     "@testing-library/jest-dom": "^5.14.1",
@@ -18,7 +19,7 @@
     "react-scripts": "5.0.1",
     "remixicon-react": "^1.0.0",
     "styled-components": "^5.3.5",
-    "tauri-plugin-store": "github:tauri-apps/tauri-plugin-store",
+    "tauri-plugin-store-api": "github:tauri-apps/tauri-plugin-store",
     "tone": "^14.8.0",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
