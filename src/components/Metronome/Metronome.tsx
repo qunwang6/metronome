@@ -161,8 +161,8 @@ const Metronome = () => {
       
   
 
-      Tone.start()
-      // Tone.Transport.start()
+      // Tone.start()
+      Tone.Transport.start()
       // Tone.context.resume()
       // alert("start211")
 
