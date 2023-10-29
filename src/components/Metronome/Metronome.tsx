@@ -157,10 +157,7 @@ const Metronome = () => {
     Tone.Transport.clear(tickerRef.current)
 
     if (isPlaying && !muteSound) {
-      const unmuteAudio = require('unmute-ios-audio')
- 
-// Call once, as early as possible in the page lifecycle
-      unmuteAudio()
+
 
       handleTick()
 

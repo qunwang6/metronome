@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "unmute-ios-audio": "github:feross/unmute-ios-audio",
     "@react-hook/media-query": "^1.1.1",
     "@tauri-apps/api": "^1.4.0",
     "@testing-library/jest-dom": "^5.14.1",
