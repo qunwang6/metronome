@@ -147,7 +147,7 @@ const Metronome = () => {
     Tone.Transport.clear(tickerRef.current)
 
     if (isPlaying && !muteSound) {
-      declare var unmute: any; 
+      
       handleTick()
 
       
