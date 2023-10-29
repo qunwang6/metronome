@@ -6,7 +6,7 @@ import { ControlCenter } from '../ControlCenter'
 import { KVContext } from '../KVContextProvider/KVContextProvider'
 import { MetroContext } from '../MetroContextProvider/MetroContextProvider'
 import { Ticker } from '../Ticker'
-const unmuteAudio = require('unmute-ios-audio')
+
 
 
 const TickerWrapper = styled.div`
@@ -147,7 +147,7 @@ const Metronome = () => {
     Tone.Transport.clear(tickerRef.current)
 
     if (isPlaying && !muteSound) {
-      unmuteAudio()
+      declare var unmute: any; 
       handleTick()
 
       
