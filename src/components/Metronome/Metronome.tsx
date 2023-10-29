@@ -7,7 +7,7 @@ import { KVContext } from '../KVContextProvider/KVContextProvider'
 import { MetroContext } from '../MetroContextProvider/MetroContextProvider'
 import { Ticker } from '../Ticker'
 
-const unmuteAudio = require('unmute-ios-audio')
+const {unmuteAudio} = require('unmute-ios-audio')
 //
 
 
