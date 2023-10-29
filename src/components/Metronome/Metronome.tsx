@@ -1,14 +1,13 @@
 import { useCallback, useContext, useEffect, useMemo, useRef } from 'react'
 import styled, { css, keyframes } from 'styled-components'
-// import * as Tone from 'tone'
+import * as Tone from 'tone'
 import { TIME_SIGNATURES, validBpm } from '../../utils'
 import { ControlCenter } from '../ControlCenter'
 import { KVContext } from '../KVContextProvider/KVContextProvider'
 import { MetroContext } from '../MetroContextProvider/MetroContextProvider'
 import { Ticker } from '../Ticker'
 
-const {unmuteAudio} = require('unmute-ios-audio')
-const {Tone} = require('tone')
+
 
 
 
@@ -158,7 +157,10 @@ const Metronome = () => {
     Tone.Transport.clear(tickerRef.current)
 
     if (isPlaying && !muteSound) {
-
+      const unmuteAudio = require('unmute-ios-audio')
+ 
+// Call once, as early as possible in the page lifecycle
+      unmuteAudio()
 
       handleTick()
 
