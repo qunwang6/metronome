@@ -172,9 +172,9 @@ const Metronome = () => {
       handleTick()
 
       
-      await Tone.start()
 
-      // Tone.start()
+
+      Tone.start()
       // Tone.Transport.start()
       // Tone.context.resume()
       // alert("start211")
