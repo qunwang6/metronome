@@ -7,7 +7,6 @@ import { KVContext } from '../KVContextProvider/KVContextProvider'
 import { MetroContext } from '../MetroContextProvider/MetroContextProvider'
 import { Ticker } from '../Ticker'
 import * as unmute from 'unmute'
-const {unmute} = require('unmute');
 
 
 const TickerWrapper = styled.div`
